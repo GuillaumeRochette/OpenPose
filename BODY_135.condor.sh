@@ -3,9 +3,11 @@ set -e
 
 video=$(realpath $1)
 
-poses_tar=$(realpath $2)
+poses_tar=$2
 poses_dir=$(dirname $poses_tar)
 mkdir -p $poses_dir
+poses_tar=$(realpath $poses_tar)
+poses_dir=$(realpath $poses_dir)
 
 tmp_name=$(basename $poses_tar | cut -d. -f1)
 mkdir -p /tmp/$tmp_name

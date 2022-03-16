@@ -4,9 +4,11 @@ set -e
 video=$(realpath $1)
 video_dir=$(dirname $video)
 
-poses_tar=$(realpath $2)
+poses_tar=$2
 poses_dir=$(dirname $poses_tar)
 mkdir -p $poses_dir
+poses_tar=$(realpath $poses_tar)
+poses_dir=$(realpath $poses_dir)
 
 cmd="video=$video && \
 poses_tar=$poses_tar && "
